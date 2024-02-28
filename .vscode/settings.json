@@ -1,5 +1,14 @@
 {
-    "cSpell.words": [
-        "Teitha"
-    ]
+	"cSpell.words": [
+		"Teitha"
+	],
+	"sqltools.connections": [
+		{
+			"previewLimit": 50,
+			"driver": "SQLite",
+			"database": "${workspaceFolder:teitha}/.datadir/teitha.db",
+			"name": "teitha"
+		}
+	],
+	"sqltools.useNodeRuntime": true
 }

@@ -17,9 +17,14 @@
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-node": "^4.0.1",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@tailwindcss/forms": "^0.5.7",
+		"@tailwindcss/typography": "^0.5.10",
+		"@types/better-sqlite3": "^7.6.9",
 		"@types/eslint": "8.56.0",
+		"@types/node": "^20.11.16",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.17",
@@ -27,8 +32,9 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0-next.4",
 		"postcss": "^8.4.34",
-		"prettier": "^3.1.1",
+		"prettier": "^3.2.5",
 		"prettier-plugin-svelte": "^3.1.2",
+		"prettier-plugin-tailwindcss": "^0.5.11",
 		"svelte": "^5.0.0-next.1",
 		"svelte-check": "^3.6.0",
 		"tailwindcss": "^3.4.1",
@@ -37,5 +43,9 @@
 		"vite": "^5.0.3",
 		"vitest": "^1.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"better-sqlite3": "^9.4.1",
+		"zod": "^3.22.4"
+	}
 }
