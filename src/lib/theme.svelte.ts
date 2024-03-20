@@ -1,32 +1,26 @@
 import { browser } from '$app/environment'
 
 export default function useTheme() {
-    let darkMode: boolean | undefined = $state()
+    let theme: string | undefined = $state()
 
     if (browser) {
-        if (
-            JSON.parse(localStorage.themeDarkMode) ||
-            (localStorage.themeDarkMode == undefined && window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-            darkMode = true
+        if (localStorage.appTheme == undefined) {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                theme = 'dark';
+            } else {
+                theme = 'light';
+            }
         } else {
-            darkMode = false
+            theme = localStorage.appTheme;
         }
+
     }
 
     return {
-        get darkMode() { return darkMode },
+        get theme() { return theme },
         toggleDarkMode() {
             if (browser) {
-                if (!darkMode) {
-                    darkMode = true;
-                    localStorage.themeDarkMode = JSON.stringify(darkMode);
-                    document.documentElement.classList.add('dark');
-                } else {
-                    darkMode = false;
-                    localStorage.themeDarkMode = JSON.stringify(darkMode);
-                    document.documentElement.classList.remove('dark');
-                }
+
             }
         }
     };
